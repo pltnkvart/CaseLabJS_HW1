@@ -3,8 +3,7 @@ function censor() {
     return function (arg1, arg2) {
         if (arg1 && arg2) {
             data.push([arg1, arg2]);
-        }
-        if (arg1) {
+        } else if (arg1) {
             data.forEach(word => {
                 arg1 = arg1.split(word[0]).join(word[1]);
             });
